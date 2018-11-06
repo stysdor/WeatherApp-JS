@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head> 
+    <meta charset="utf-8" >
+    
+    <title>Prognoza pogody</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <form id="choosecity" onsubmit="return false;">
+                <label>
+                    <input type="text" id="city" placeholder="Nazwa miasta" onfocus="this.placeholder=''" onblur="this.placeholder='Nazwa miasta'" />
+                </label>
+                <input id="submit" type="button" value="Dodaj" />
+            </form>
+        </header>
+        <main class="table">
+            <table id="temp-table">
+               <thead>
+                   <tr>
+                    <th class="nr-col col">#</th>
+                    <th class="city-col col">Miasto</th>
+                    <th class="temp-col col">Średnia prognozowana temperatura</th>
+                    <th class="button-col col"></th>
+                </tr>
+                </thead> 
+                <tbody>
+                </tbody>
+            </table>
+           <button class="removeAll-button" id="removeAll">Remove All</button>
+            
+        </main>
+    
+    </div>
+    <script src="clientOpenWeather.js" type="text/javascript">
+    </script> 
+    <script src="calculations.js" type="text/javascript">
+    </script> 
+    <script src="localStorage.js" type="text/javascript">
+    </script> 
+    <script src="main.js" type="text/javascript">
+    </script>
+   
+    
+</body>
+
+</html>
